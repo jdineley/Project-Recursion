@@ -3,6 +3,7 @@
 //   a b c
 //     a b c
 
+// Fib iteration
 function fibs(n) {
     if(n === 1) return [0]
     let a = 0;
@@ -19,7 +20,7 @@ function fibs(n) {
     return arr
 }
 
-// Fib recursion with caching
+// Fib recursion with caching (single number return)
 function fibsRec1(n, cache = {}, arr = [0,1]) {
     if(n === 1) return 0;
     if(n === 2) return 1;
@@ -34,7 +35,7 @@ function fibsRec1(n, cache = {}, arr = [0,1]) {
 
 console.log(fibsRec(8))  
 
-
+// Fib recursion array output
 const fibsRec2 = (n, a = [0, 1]) => {
     if (a.length >= n) return a;
     return fibsRec2(n, [...a, a[a.length - 2] + a[a.length - 1]]);
@@ -42,11 +43,4 @@ const fibsRec2 = (n, a = [0, 1]) => {
   
   console.log(fibsRec2(6));
 
-//   fibRecursive(6, [0,1,1])
-//      fibRecursive(6, [0,1,1,2])
-//          fibRecursive(6, [0,1,1,2,3])
-//              fibRecursion(6, [0,1,1,2,3,5])
-//              return [0,1,1,2,3,5]
-//          return [0,1,1,2,3,5]
-//      return [0,1,1,2,3,5]
-//  return [0,1,1,2,3,5]
+

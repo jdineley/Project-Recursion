@@ -27,7 +27,7 @@ function merge(arg) {
     return c
 }
 
-// 2-way merge sort - iterative proceedure
+// random array generation
 function randomNumberGenerator(max) {
     return Math.floor(Math.random()* max)
 }
@@ -40,6 +40,10 @@ function randomNumArrayGenerator(n) {
 }
 
 let list = randomNumArrayGenerator(14)
+
+
+// 2-way merge sort - iterative proceedure
+
 //         [9 , 3 , 7 , 5 , 6 , 4 , 8 , 2]   //8 separate lists
 //      [(3 , 9) , (5 , 7) , (4 , 6) , (2 , 8)]   //4 separate sorted lists
 //        [(3 , 5 , 7 , 9) , (2 , 4 , 6 , 8)]   //2 separate sorted lists
@@ -60,7 +64,7 @@ function twoWayMergeSort(arr) {
             }
         }
     }  
-    // The logic is set up to fit 2 squared array lengths
+    // The logic is set up to fit n to power 2 array lengths
     // If outside this then some ordered arrays get compared to undefined which has no net effect
     // Here we filter away the undefined, but the result is correct
     return arr.filter(el => {

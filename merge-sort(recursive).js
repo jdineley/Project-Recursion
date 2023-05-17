@@ -1,4 +1,4 @@
-//  Merge sort recursive
+//  Merge sort recursive - divide and conquer
 
 // merge: sorts two already sorted arrays a,b
  function merge(a,b) {
